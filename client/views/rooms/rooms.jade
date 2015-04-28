@@ -14,7 +14,7 @@ h3 ROOM INVENTORY
 		.col-xs-2
 			form('addItemsForm', novalidate)
 				.form-group
-					label(for='itemSelection')
+					label(for='itemSelection') Select Room
 					select.form-control(name='itemSelection', ng-model='room.roomName')
 						option(ng-repeat='name in names') {{name}}
 		.col-xs-2
@@ -36,3 +36,28 @@ h3 ROOM INVENTORY
 		.col-xs-2
 			.form-group
 				button.btn.btn-success#addItemButton(type='submit', ng-click='addItem(room)') Add Item
+h3 SHOW ROOM INVENTORY
+	.row
+		.col-xs-2
+			.form-group
+					label(for='itemSelection') Which Room?
+					select.form-control(name='itemSelection', ng-model='roomName')
+						option(ng-repeat='name in names') {{name}}
+		.col-xs-2
+			.form-group
+				button.btn.btn-success#addItemButton(type='submit', ng-click='showItems(roomName)') Show Items
+	.row
+		.col-xs-4
+			table.table.table-striped(ng-repeat='(key, value) in afUser.rooms')
+				thead
+					th Room
+					th Item
+					th Quantity
+					th Price (USD)
+					th Purchase Date
+				tr(ng-repeat='item in afUser.rooms[key]')
+					td {{item.roomName}}
+					td {{item.item}}
+					td {{item.quantity}}
+					td {{item.value | currency}}
+					td {{item.date | date: 'medium'}}

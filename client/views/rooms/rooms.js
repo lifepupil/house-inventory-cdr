@@ -6,10 +6,15 @@ angular.module('house-inventory-cdr')
 	afUser.$loaded().then(syncNames);
 
 
+	$scope.showItems =  function(name) {
+		console.log(name);
+	};
+
 	$scope.addItem =  function(room) {
-		console.log('add item initialized');
+		// console.log('add item initialized');
 		Room.addItem(room);
-	}
+		$scope.room = {};
+	};
 
 	$scope.addRoom = function(name) {
 		Room.add(name).then(syncNames);
