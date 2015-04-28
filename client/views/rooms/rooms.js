@@ -5,8 +5,10 @@ angular.module('house-inventory-cdr')
 	var afUser = $scope.afUser = Room.init();
 	afUser.$loaded().then(syncNames);
 
+
+
+
 	$scope.addRoom = function(name) {
-		// console.log('using Test to add name', name);
 		Room.add(name).then(syncNames);
 		$scope.roomName = '';
 	};

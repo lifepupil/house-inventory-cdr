@@ -15,8 +15,6 @@ angular.module('house-inventory-cdr')
 	};
 
 	Room.add = function(name) {
-		// console.log('inside test.js and the name is', name);
-		// console.log('the afUser is', afUser);
 		var names = afUser.names ? afUser.names.split(',') : [];
 		names.push(name);
 		afUser.names = names.join(',');
