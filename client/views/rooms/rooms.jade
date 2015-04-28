@@ -1,0 +1,10 @@
+h2 ADD ROOMS
+.row
+	.col-xs-4
+		form('addRoomForm' novalidate)
+			.form-group
+				label(for='addRoomInput')
+				input.form-control(type='text', name='addRoomInput', ng-model='roomName')
+			.form-group
+				button.btn.btn-success(ng-click='addRoom(roomName)') Add Class
+	.col-xs-8
