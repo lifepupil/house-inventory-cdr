@@ -14,6 +14,10 @@ angular.module('house-inventory-cdr')
 		return afUser;
 	};
 
+	Room.addItem = function(room) {
+		
+	};
+
 	Room.add = function(name) {
 		var names = afUser.names ? afUser.names.split(',') : [];
 		names.push(name);

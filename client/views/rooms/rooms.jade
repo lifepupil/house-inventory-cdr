@@ -5,9 +5,9 @@ h3 ADD ROOMS
 			.form-group
 				label(for='addRoomInput')
 				input.form-control(type='text', name='addRoomInput', ng-model='roomName')
-			.form-group
-				button.btn.btn-success(ng-click='addRoom(roomName)') Add Class
 	.col-xs-8
+			.form-group
+				button.btn.btn-success#addRoomButton(ng-click='addRoom(roomName)') Add Class
 		
 h3 ROOM INVENTORY
 	.row
@@ -21,13 +21,13 @@ h3 ROOM INVENTORY
 			.form-group
 				label(for='thisItem') Item
 				input.form-control(type='text', name='thisItem', ng-model='room.item')
-		.col-xs-2
+		.col-xs-1
 			.form-group
 				label(for='itemNum') Quantity
 				input.form-control(name='itemNum', type='number', ng-model='room.quantity')
 		.col-xs-2
 			.form-group
-				label(for='itemValue') Unit Value
+				label(for='itemValue') Unit Value (USD)
 				input.form-control(name='itemValue', type='number', ng-model='room.value')
 		.col-xs-2
 			.form-group
@@ -35,4 +35,4 @@ h3 ROOM INVENTORY
 				input.form-control(name='itemDate', type='date', ng-model='room.date')
 		.col-xs-2
 			.form-group
-				button.btn.btn-success#addItem(type='submit', ng-click='addItem(room)') Add Item
+				button.btn.btn-success#addItemButton(type='submit', ng-click='addItem(room)') Add Item
