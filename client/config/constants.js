@@ -1,4 +1,4 @@
 'use strict';
 
-angular.module('poseidon')
-.constant('firebaseUrl', 'https://ENTER-YOUR-FB-URL.firebaseio.com/');
+angular.module('house-inventory-cdr')
+.constant('firebaseUrl', 'https://house-inventory-cdr.firebaseio.com/');

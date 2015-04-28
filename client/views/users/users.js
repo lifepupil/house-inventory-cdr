@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('poseidon')
+angular.module('house-inventory-cdr')
 .controller('UsersCtrl', function($scope, $state, $window, User){
   $scope.name = $state.current.name;
 

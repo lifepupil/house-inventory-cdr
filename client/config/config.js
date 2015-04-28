@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('poseidon')
+angular.module('house-inventory-cdr')
 .config(function($stateProvider, $urlRouterProvider){
   $urlRouterProvider.otherwise('/');
 

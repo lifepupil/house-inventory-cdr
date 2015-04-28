@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('poseidon')
+angular.module('house-inventory-cdr')
 .factory('User', function($rootScope){
 
   function User(){
